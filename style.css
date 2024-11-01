@@ -1,0 +1,80 @@
+/**
+ * This file is loaded *before* editor.css
+ */
+
+.vie-faq {
+	margin: 1rem auto;
+	border: 2px solid rgb(198, 205, 218);
+	overflow: hidden;
+}
+
+.vie-faq .vie-faq-question-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.vie-faq .vie-faq-question-wrapper p {
+	flex: 8;
+	margin: 0;
+	cursor: pointer;
+	padding: 2rem;
+	transition: background-color 350ms ease-in-out;
+}
+
+.vie-faq .vie-faq-question-arrow {
+	flex: 2;
+	display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+.vie-faq .vie-faq-question-arrow::after {
+	content: url('assets/arrow.png');
+	float: right;
+	transform: rotate(0);
+	transition: transform 250ms ease-in-out;
+}
+
+.vie-faq.open .vie-faq-question-arrow::after {
+	transform: rotate(180deg);
+}
+
+.vie-faq .vie-faq-question-wrapper:hover {
+	background-color: rgb(237, 237, 241);
+	cursor: pointer;
+}
+
+.vie-faq.open .vie-faq-question-wrapper {
+	background-color: rgb(237, 237, 241);
+}
+
+.vie-faq .expand {
+	float: right;
+	transform: rotate(45deg);
+	font-size: 1.8em;
+	transition: transform 350ms ease-in-out;
+}
+
+.vie-faq.open .expand{
+	transform: rotate(0);
+}
+
+.vie-faq .vie-faq-answer-wrapper {
+	max-height: 0px;
+	overflow: hidden;
+	line-height: 1.6; 
+	transition: max-height 350ms ease-in-out;
+}
+
+.vie-faq-answer-wrapper div {
+	padding: 1rem 2rem;
+}
+
+@media(max-width: 560px) {
+
+	.vie-faq .vie-faq-question-arrow {
+		margin-right: 15px;
+		zoom: 50%;
+	}
+}

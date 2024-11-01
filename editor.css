@@ -1,0 +1,22 @@
+/**
+ * This file is loaded *after* style.css
+ */
+ .vie-faq p{
+	background: #fff;
+	color: #1e1e1e;
+	border: 2px solid rgb(198, 205, 218);
+	padding: 20px;
+}
+
+.vie-faq {
+	background: rgb(237, 237, 241);
+	padding: 1px 20px;
+}
+
+.vie-faq p:first-of-type::before {
+	content: 'Q: '
+}
+
+.vie-faq p:last-of-type::before {
+	content: 'A: '
+}
